@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import RegistroObservaciones from '../images/registraTusObservaciones.gif'
 import Pista from '../images/lupa.gif'
 import Ubicacion from '../images/mapa.gif'
