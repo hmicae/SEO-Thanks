@@ -1,20 +1,13 @@
 import React, {useState} from 'react'
 import axios from '../../api/axios'
 
-
-
-
-
 const REGISTRATION_URL = '/api/register'
-
 
 function Register() {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [success, setSuccess] = useState(false)
-   
-
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -40,13 +33,11 @@ function Register() {
         {success ? (
                 <section className='success'>
                     <h2>¡Registro completado!</h2>
-                    <button className='btn-login' onClick={() => window.location.pathname='/Login'}>Ir al inicio de sesión</button>
-
+                    <a href='/login' className='btn-login'>Ve al inicio de sesión</a>
                 </section> 
             ) : (
                 <section>
                     <h1>Registro de usuario</h1>
-
                         <div className='box-registration'>
                             <form onSubmit={handleSubmit}>
                                 <label htmlFor='username'>username</label>
@@ -69,7 +60,8 @@ function Register() {
                                 />
                                 <button className='btn'>Registrarse</button>
                             </form>
-                            <button className='btn-login' onClick={() => window.location.pathname='/Login'}>O inicia de sesión</button>
+
+                            <a href="/login" className='btn-login'>Iniciar sesión</a>
                         </div>
                 </section>
             )}
