@@ -1,0 +1,38 @@
+.card-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+     /* Centra horizontalmente la imagen en pantallas grandes */
+}
+
+@media (max-width: 768px) {
+    .card-img {
+      margin: 0; /* Elimina el margen horizontal en pantallas pequeñas */
+    }
+}
+
+.card-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-left: 10px; /* Agregar margen a la izquierda */
+}
+
+.heart-fill-red {
+    color: red;
+}
+
+.bi-heart {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.info {
+    background-color: #6BC047 !important;
+}
+
+.cosa {
+    margin-right: 2px !important;
+}
