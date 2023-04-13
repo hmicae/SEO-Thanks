@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\InsectsRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: InsectsRepository::class)]
@@ -16,7 +17,7 @@ class Insects
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
     public function getId(): ?int
