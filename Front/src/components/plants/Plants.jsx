@@ -6,7 +6,7 @@ function Plants() {
 
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/plants/list')
+        fetch('http://127.0.0.1:8000/plant/list')
             .then(response => response.json())
             .then(plants => setRepo(plants))
             .catch(error => console.error(error));

@@ -33,7 +33,6 @@ function Home() {
           </div>
 
           <div className="steps pasos">
-
             <div className="step1">
               <img src={Ubicacion} alt="" />
               <h3>Ubícate en el mapa</h3>
@@ -51,9 +50,8 @@ function Home() {
           </div>
 
           <div className="containerFlex">
-          <button className="greenbtn" onClick={handleEmpezarClick}>Empezar</button>
+            <button className="greenbtn" onClick={handleEmpezarClick}>Empezar</button>
           </div>
-
         </div>
       )}
       {showRegister && <Register />}

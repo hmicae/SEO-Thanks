@@ -4,6 +4,7 @@ import Login from './components/login/Login';
 import Register from './components/registro/register';
 import Birds from './components/birds/Birds'
 import Plants from './components/plants/Plants';
+import Thanks from './components/thanks/Thanks';
 
 function App() {
   const router = createBrowserRouter([
@@ -18,6 +19,10 @@ function App() {
     {
       path:"/Login",
       element:<><Login /> </>
+    },
+    {
+      path:"/Thanks",
+      element:<><Thanks /></>
     },
     
 
