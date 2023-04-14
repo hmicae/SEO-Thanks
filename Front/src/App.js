@@ -10,7 +10,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element:<><Home /> <Birds /> <Plants /> </>
+      element:<><Home /> </>
     },
     { 
       path:"/Register",
@@ -19,6 +19,10 @@ function App() {
     {
       path:"/Login",
       element:<><Login /> </>
+    },
+    {
+      path:"/Discovery",
+      element:<><Birds /> <Plants /> </>
     },
     {
       path:"/Thanks",

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import axios from '../../api/axios';
 import './login.css';
 import Logo from '../images/logoAventurero.png';
-import GolondrinaL from '../images/pajaro 1.png';
-import GolondrinaR from '../images/pajaro 2.png';
+import GolondrinaL from '../images/birdLeft.png';
+import GolondrinaR from '../images/birdRight.png';
 
 const LOGIN_URL = '/api/login_check';
 
@@ -55,10 +55,13 @@ function Login() {
                     <img src={GolondrinaR} id="bird2" />
                 </header>
                 {success ? (
-                    <div className='success'>
-                        <h2>¡Has iniciado sesión!</h2>
-                        <a href='/' className='btn-login'>Ve al inicio</a>
+                    <div className='success d-flex container justify-content-center'>
+                        <div className="d-flex flex-column align-items-center">
+                            <h2>¡Has iniciado sesión!</h2>
+                            <a href='/Discovery' className='btn-login btnAzul'>Ve al inicio</a>
+                        </div>
                     </div>
+
                 ) : (
                     <div id='secLogin' className='d-flex container justify-content-center'>
                         <h1>Login</h1>
@@ -84,7 +87,9 @@ function Login() {
                                     required
                                     className='form-control'
                                 />
-                                <button className='btnAzul'>Entrar</button>
+                                <div className='d-flex container justify-content-center'>
+                                    <button className='btnAzul'>Entrar</button>
+                                </div>
                             </form>
 
 

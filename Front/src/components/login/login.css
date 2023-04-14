@@ -17,4 +17,8 @@
         #bird1{display: none;}
         #bird2{width:30%}
         
-      }
+        }
+
+.success h2 {
+    width: 100%;
+}
