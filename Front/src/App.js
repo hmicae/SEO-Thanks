@@ -3,14 +3,15 @@ import Home from './components/Home/Home';
 import Login from './components/login/Login';
 import Register from './components/registro/register';
 import Birds from './components/birds/Birds'
+import Plants from './components/plants/Plants';
 
 function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element:<><Home /> <Birds /> </>
+      element:<><Home /> <Birds /> <Plants /> </>
     },
-    {
+    { 
       path:"/Register",
       element:<><Register />  </>
     },
