@@ -2,24 +2,24 @@
 
 namespace App\Controller;
 
-use App\Entity\Insects;
-use App\Form\InsectsType;
-use App\Repository\InsectsRepository;
+use App\Entity\Plant;
+use App\Form\PlantsType;
+use App\Repository\PlantRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/insects')]
-class InsectsController extends AbstractController
+#[Route('/plant')]
+class ApiPlantController extends AbstractController
 {
-    #[Route('/list', name: 'app_apiinsects_index', methods: ['GET'])]
-    public function index(InsectsRepository $insectsRepository): Response
+    #[Route('/list', name: 'app_apiplant_index', methods: ['GET'])]
+    public function index(PlantRepository $plantRepository): Response
     {
-        $insects = $insectsRepository->findAll();
+        $plant = $plantRepository->findAll();
         $data = [];
 
-        foreach ($insects as $p) {
+        foreach ($plant as $p) {
             $data[] = [
                 'id' => $p->getId(),
                 'name' => $p->getName(),

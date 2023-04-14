@@ -2,24 +2,24 @@
 
 namespace App\Controller;
 
-use App\Entity\Plants;
-use App\Form\PlantsType;
-use App\Repository\PlantsRepository;
+use App\Entity\Bugs;
+use App\Form\BugsType;
+use App\Repository\BugsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/plants')]
-class PlantsController extends AbstractController
+#[Route('/bugs')]
+class ApiBugsController extends AbstractController
 {
-    #[Route('/list', name: 'app_apiplants_index', methods: ['GET'])]
-    public function index(PlantsRepository $plantsRepository): Response
+    #[Route('/list', name: 'app_apibugs_index', methods: ['GET'])]
+    public function index(BugsRepository $bugsRepository): Response
     {
-        $plants = $plantsRepository->findAll();
+        $bugs = $bugsRepository->findAll();
         $data = [];
 
-        foreach ($plants as $p) {
+        foreach ($bugs as $p) {
             $data[] = [
                 'id' => $p->getId(),
                 'name' => $p->getName(),
