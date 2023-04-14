@@ -73,8 +73,6 @@ function Login() {
                             />
                             <button className='btn'>Entrar</button>
                         </form>
-
-                        <a href="#" className='btn-password'>Recuperar Contraseña</a>
                     </div>
             </section>
         )}
