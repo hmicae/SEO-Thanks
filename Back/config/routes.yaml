@@ -18,3 +18,8 @@ app_post:
     path: /api/post
     methods: [POST, GET]
     controller: App\Controller\PostController::likeBird
+
+app_allbird:
+    path: /api/allbirds
+    methods: [POST, GET]
+    controller: App\Controller\PostController::AllBird

@@ -22,9 +22,6 @@ class PostController extends AbstractController
         if (!isset($data) || !is_array($data) || count($data) === 0) {
             return $this->json(['error' => 'Datos inválidos'], $status = 400, $headers = ['Access-Control-Allow-Origin'=>'*']);
         }
-
-
-
 // Recorrer la lista de pájaros
         
         foreach ($data['birds'] as $birdData) {
@@ -53,4 +50,18 @@ class PostController extends AbstractController
 
         return $this->json($post, $status = 200, $headers = ['Access-Control-Allow-Origin'=>'*']);
     }
+    #[Route('/allbird', name: 'app_allbird', methods: ['POST', 'GET'])]
+    public function AllBird(Request $request, EntityManagerInterface $entityManager, PostRepository $postRepository): Response
+    {
+    $post = [];
+
+    $result = $postRepository->findAll();
+    foreach ($result as $r) {
+        $post[] = [
+            'id' => $r->getId(),
+            'name' => $r->getName(),
+        ];
+    }
+    return $this->json($post, $status = 200, $headers = ['Access-Control-Allow-Origin'=>'*']);
+}
 }
