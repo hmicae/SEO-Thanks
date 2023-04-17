@@ -5,10 +5,7 @@
     font-family: 'Poppins', sans-serif;
    
 }
-body {
-    background-color: #1C9BD5;
-  }
-  
+
 .contenedor {
     display: flex;
     flex-direction: column;
@@ -83,7 +80,7 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 14px; 
-    width: 190px; 
+    width: 170px; 
     text-decoration: none; 
 }
 
@@ -96,7 +93,7 @@ body {
         height: auto;
         width: 100%;
         max-width: 300px;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
     .bocadillo {
         min-width: 90%;

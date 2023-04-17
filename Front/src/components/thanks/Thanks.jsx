@@ -10,8 +10,8 @@ function Thanks() {
                 <p>¡Gracias por tu ayuda aventurer@!</p>
             </div>
             <div id="club-aventureros">
-            <p>Para más información, visita nuestro Club de aventureros.</p>
-            <a href="https://clubaventureros.org/" id="boton-club-aventureros">Club de aventureros</a>
+            <p>Para más información, visita nuestro Club Aventureros.</p>
+            <a href="https://clubaventureros.org/" id="boton-club-aventureros">Club Aventurer@</a>
         </div>
         </div>
     );
